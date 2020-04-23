@@ -1,0 +1,155 @@
+*{
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+ul,
+li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header__top{
+  border-bottom: 1px solid rgb(223, 223, 223);
+  margin-bottom: 15px; /* Отступ снизу */
+  padding-bottom: 25px; /* Расстояние от линии до текста */ 
+}
+.header__logo{
+  position: absolute;
+  top: 15px; /* Положение от верхнего края */
+  left: 120px; /* Положение от левого края */   
+  width: 100px; /* Ширина блока */
+}
+.header__signIn{
+  position: relative; /* Относительное позиционирование */
+  top: 18px; /* Положение от верхнего края */
+  padding: 10px; /* Поля вокруг текста */
+  color: #5FA777; /* Цвет текста */
+  margin: 0 2px 0 1150px; /* Отступы вокруг блока */
+  right: 40px; /* Положение от правого края */
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+}
+.header__getStarted{
+  position: absolute; /* Абсолютное позиционирование */
+  top: 19px; /* Положение от верхнего края */
+  right: 150px; /* Положение от правого края */
+  color: #5FA777;
+  border: 1px solid #5FA777; /* Параметры рамки */
+  border-radius: 5px;
+  padding: 8px 15px; /* Поля вокруг текста */
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+}
+
+.header__content{
+  padding-bottom: 20px;
+}
+.header__content-inner{
+  display: flex;
+  justify-content: space-between;
+}
+.pro__logo{
+  position: absolute;
+  top: 75px; 
+  left: 125px;   
+  width: 100px;
+}
+.menu li{
+  display: inline-block;
+}
+.menu li + li{
+  padding-left: 15px;
+}
+.bottom{
+  position: relative;
+  color: rgb(134, 134, 134);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: semi-expanded;
+  letter-spacing: 1px;
+  left: 170px;
+  top: 5px;
+}
+
+
+.img-inner{
+  background-image: url(../images/pigs-2019.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 550px;
+}
+.main-text{
+  margin-left: 390px;
+  margin-right: 390px;
+  line-height: 1.5;
+}
+.title-inner{
+  margin-left: -10px;
+  margin-right: -10px;
+  font-family: 'Merriweather', serif;
+  font-size: 32px;
+}
+.content-text{
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.author{
+  display: flex;
+  margin-bottom: 50px;
+}
+.avatar{
+  position: absolute;
+  display: inline-block;
+}
+.author-name{
+  position: relative;
+  top: -3px;
+  left: 40px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+}
+.follow-bottom{
+  position: relative;
+  top: -5px;
+  left: 35px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 1px 7px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+}
+.author li + li{
+  padding-left: 15px;
+}
+.data{
+  position: relative;
+  top: 20px;
+  left: -95px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  color: dimgray;
+}
+/*
+.social-net li{
+  display: inline-block;
+}
+.social-net li + li{
+  padding-left: 1px;
+}
+.social-net{
+  position: relative;
+  left: 500px;
+  top: -75px;
+  margin-bottom: -50px;
+}
+*/
