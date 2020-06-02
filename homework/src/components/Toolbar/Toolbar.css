@@ -18,7 +18,7 @@
   margin-left: 1rem;
 }
 
-.toolbar__logo a{
+.toolbar__logo p{
   color: white;
   text-decoration: none;
   font-size: 1rem;
@@ -38,7 +38,19 @@
 .toolbar_navigation-items li{
   padding: 0 0.5rem;
 }
+/*
+.sign-up, .sign-in{
+  color: white;
+  text-decoration: none;
+}
 
+.sign-up:hover, .sign-up:active{
+  color: #212738;
+}
+
+.sign-in:hover, .sign-in:active{
+  color: #212738;
+} */
 .toolbar_navigation-items a{
   color: white;
   text-decoration: none;

@@ -1,17 +1,37 @@
 import React, { Component } from 'react';
-import Toolbar from './components/Toolbar/Toolbar';
-import Converter from './components/Converter/Converter';
-/*import './App.css';*/
+
+import fire from './config/Fire';
+import Login from './components/Home'
+import Home from './components/LoginRegister'
 
 class App extends Component {
-  render() {
+
+  constructor(){
+    super();
+    this.state = {
+      user: null
+    }
+  }
+
+  componentDidMount(){
+    this.authListener();
+  }
+
+  authListener(){
+    fire.auth().onAuthStateChanged((user) => {
+      if(user){
+        this.setState({user});
+      }else{
+        this.setState({user:null});
+      }
+    });
+  }
+
+  render(){
     return (
-      <div className="App">
-        <Toolbar />
-        <main style={{marginTop: '64px'}}>
-          <Converter />
-        </main>
-      </div>
+        <div>
+          {this.state.user ? (<Login />) : (<Home />)}
+        </div>
     );
   }
 }

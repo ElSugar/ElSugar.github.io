@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Converter.css'
 
-class converter extends Component {
+class Converter extends Component {
   state = {
     currencies: ["RUB", "USD", "EUR", "HKD", "JPY","CAD"],
     base: "RUB",
@@ -44,7 +44,7 @@ class converter extends Component {
             <p>{amount} {base} is equavalent to {result} {convertTo}</p>
             <div className="row">
               <div className="col">
-                <select 
+                <select
                   name="convertTo" 
                   value={convertTo} 
                   onChange={this.handleSelect}
@@ -63,4 +63,4 @@ class converter extends Component {
   }
 }
 
-export default converter;
+export default Converter;

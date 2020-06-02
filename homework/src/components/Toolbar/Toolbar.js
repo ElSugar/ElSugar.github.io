@@ -1,19 +1,36 @@
 import React from 'react';
 import './Toolbar.css';
 
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import SignUp from '../../signUp/signUp';
+import SignIn from '../../signIn/signIn';
+import Home from '../Home';
+
 const toolbar = props => (
-  <header className="toolbar">
-    <nav className="toolbar__navigation">
-      <div className="toolbar__logo"><a href="/">CURRENCY CONVERTER</a></div>
-      <div className="spacer"></div>
-      <div className="toolbar_navigation-items">
-        <ul>
-          <li><a href="/">Sign in</a></li>
-          <li><a href="/">Sign up</a></li>
-        </ul>
+  <BrowserRouter>
+    <header className="toolbar">
+      <nav className="toolbar__navigation">
+        <div className="toolbar__logo"><p>CURRENCY CONVERTER</p></div>
+        <div className="spacer"></div>
+        <div className="toolbar_navigation-items">
+          <ul>
+            <li>
+              <Link to="/sign-in">Sign in</Link>
+            </li>
+            <li>
+              <Link to="/sign-up">Sign up</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <hr />
+      <div className="main-route-place">
+        <Route path="/sign-in" component={SignIn} />
+        <Route path="/sign-up" component={SignUp} />
       </div>
-    </nav>
-  </header>
+  </BrowserRouter>
+  
 );
 
 export default toolbar;
