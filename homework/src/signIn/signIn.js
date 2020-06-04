@@ -35,13 +35,11 @@ class SignIn extends Component {
         let errorNotification = this.state.fireErrors ? 
             ( <div className="Error"> {this.state.fireErrors} </div> ) : null;
 
-        let submitBtn = this.state.loginBtn ? 
-            (<input className="loginBtn" type="submit" onClick={this.login} value="Enter" />) : 
-            (<input className="loginBtn" type="submit" onClick={this.register} value="Register" />);
+        let submitBtn = (<input className="loginBtn" type="submit" style={{marginLeft:'110px'}} onClick={this.login} value="Enter" />);
 
         return(
             <div className="form_block">
-                <div id="title">{this.state.formTitle}</div>
+                <div id="title" style={{marginLeft:'125px'}}>{this.state.formTitle}</div>
                 <div className="body">
                     {errorNotification}
                     <form>

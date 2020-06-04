@@ -14,6 +14,14 @@ class SignUp extends Component {
         }
     }
 
+    login = e => {
+        e.preventDefault();
+        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+        .catch((error) => {
+            this.setState({fireErrors: error.message})
+        });
+    }
+
     register = e => {
         e.preventDefault();
         fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
@@ -23,7 +31,7 @@ class SignUp extends Component {
     }
 
     getAction = action => {
-        this.setState({formTitle: 'Register New User', loginBtn: false, fireErrors: ''})
+        this.setState({formTitle: 'Register New User', loginBtn: false, fireErrors: ''});
     }
 
     handleChange = e => {
@@ -35,13 +43,11 @@ class SignUp extends Component {
         let errorNotification = this.state.fireErrors ? 
             ( <div className="Error"> {this.state.fireErrors} </div> ) : null;
 
-        let submitBtn = this.state.loginBtn ? 
-            (<input className="loginBtn" type="submit" onClick={this.login} value="Enter" />) : 
-            (<input className="loginBtn" type="submit" onClick={this.register} value="Register" />);
+        let submitBtn = (<input className="loginBtn" type="submit" style={{marginLeft:'100px'}} onClick={this.register} value="Register" />);
 
         return(
             <div className="form_block">
-                <div id="title">{this.state.formTitle}</div>
+                <div id="title" style={{marginLeft:'85px'}}>{this.state.formTitle}</div>
                 <div className="body">
                     {errorNotification}
                     <form>

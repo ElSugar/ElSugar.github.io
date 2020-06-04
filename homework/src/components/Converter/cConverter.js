@@ -74,7 +74,7 @@ class CurrencyConverter extends Component {
             <div className="card card-body">
               <p>
                 {amount} {base} is equevalent to
-              </p>
+              </p> 
               <p>
                 {amount === ""
                   ? "0"
@@ -83,7 +83,6 @@ class CurrencyConverter extends Component {
                   : result}{" "}
                 {convertTo}
               </p>
-              <p>As of {amount === "" ? "/ / /" : date === null ? "" : date}</p>
               <div className="row">
                 <div className="col-lg-10">
                   <form className="form-inline mb-4">
@@ -132,6 +131,7 @@ class CurrencyConverter extends Component {
                       ))}
                     </select>
                   </form>
+                  <p>As of {amount === "" ? "/ / /" : date === null ? "" : date}</p>
                 </div>
               </div>
             </div>
